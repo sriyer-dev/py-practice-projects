@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "name": "chair",
+      "cost": "150"
+    },
+    {
+      "id": 2,
+      "name": "table",
+      "cost": "1000"
+    },
+    {
+      "id": 3,
+      "name": "plate",
+      "cost": "10"
+    }
+  ]
+}
