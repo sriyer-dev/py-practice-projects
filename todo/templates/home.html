@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = "container">
+    <h2>{{user}}'s To-Do List</h2>
+    <a href="items/new"> <button class="btn btn-primary">+</button> </a>
+    <hr/>
+    {%for item in items%}
+        <strong>{{item.title}} </strong> due on <strong> {{item.target_date}}</strong>
+        <p> {{item.description}}</p>
+        <a href="/items/{{item._id}}/update"> <button class="btn btn-info">Edit</button> </a>
+        <hr />
+    {%endfor %}
+</div>
+{% endblock %}

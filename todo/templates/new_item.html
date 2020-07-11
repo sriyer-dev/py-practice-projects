@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = "container">
+    <form action="/items" method="POST">
+        <label for="title">Title</label>
+        <input name="title" id="title" type="text"/>
+        <br/>
+        <label for="description">Description</label>
+        <textarea name="description" id="description"></textarea>
+        <br/>
+        <label for="target">Target Date(DD/MM/YYYY) </label>
+        <input name="target" id="target" type="text"/>
+        <br/>
+        <input type="submit">Submit</input>
+    </form>
+</div>
+{% endblock %}

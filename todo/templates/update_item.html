@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+<script type="text/javascript">
+
+
+</script>
+
+{% block content %}
+<div class = "container">
+    <form action="/items/{{item._id}}" method="POST">
+        <div  class="row">
+            <label for="title" class="col-md-3">Title</label>
+            <input name="title" id="title" type="text" value="{{item.title}}" class="col-md-6" />
+        </div>
+        <br/>
+        <div  class="row">
+            <label class="col-md-3">Create Date</label>
+            <label class="col-md-6">{{item.create_date}}</label>
+        </div>
+        <div class="row">
+            <label for="target" class="col-md-3">Target Date(DD/MM/YYYY) </label>
+            <input name="target" id="target" type="text" value="{{item.target_date}}" class="col-md-6"/>
+        </div>
+        <div class="row">
+            <label class="col-md-3">Closed Date</label>
+            <label class="col-md-6">{{item.complete_date}}</label>
+        </div>
+        <div class="row">
+            <label class="col-md-3">Current Status</label>
+            <label class="col-md-6">{{item.status}}</label>
+        </div>
+        <div class="row">
+            <label class="col-md-3">New Status</label>
+            <div id="status-buttons" class="col-md-9">
+                <button class="btn btn-warning col-md-2" value="Open" name="status" >Open</button>
+                <button class="btn btn-info col-md-2" value="In Progress" name="status">In Progress</button>
+                <button class="btn btn-success col-md-2" value="Closed" name="status">Closed</button>
+                <button class="btn btn-danger col-md-2" value="Cancelled" name="status">Cancelled</button>
+            </div>
+        </div>
+        <div class="row">
+            <label for="description" class="col-md-6">Description</label>
+            <textarea name="description" id="description" class="col-md-12" rows="10">{{item.description}}</textarea>
+        </div>
+        <br/>
+
+        <input type="submit"/>
+    </form>
+</div>
+{% endblock %}

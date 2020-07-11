@@ -1,0 +1,10 @@
+body {
+    background-color: rust;
+}
+
+h2 {
+    display: inline-block;
+}
+#status-buttons {
+    padding: 5px;
+}
